@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
-use Symplify\EasyCodingStandard\ValueObject\Option;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
 return static function (ECSConfig $ecsConfig): void {
@@ -20,10 +19,8 @@ return static function (ECSConfig $ecsConfig): void {
         SetList::DOCBLOCK,
         SetList::PSR_12,
     ]);
-    $parameters = $ecsConfig->parameters();
-    $cacheDir = './cache/ecs_cache';
-    $parameters->set(Option::CACHE_DIRECTORY, $cacheDir);
 
-    // [default: \Nette\Utils\Strings::webalize(getcwd())']
-    $parameters->set(Option::CACHE_NAMESPACE, 'ecs');
+    $cacheDir = './cache/ecs_cache';
+    $ecsConfig->cacheDirectory($cacheDir);
+    $ecsConfig->cacheNamespace('ecs');
 };
