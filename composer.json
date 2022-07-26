@@ -1,0 +1,22 @@
+{
+  "name": "noximo/ecs-test",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Noximo\\EcsTest\\": "src/"
+    }
+  },
+  "require": {
+    "php": "7.4",
+    "symplify/easy-coding-standard": "^11.0"
+  },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "scripts": {
+    "ecs": "ecs check src --fix --clear-cache",
+    "ecs2": "ecs check src --fix"
+  }
+}
