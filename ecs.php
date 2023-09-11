@@ -14,10 +14,7 @@ return static function (ECSConfig $ecsConfig): void {
     ]);
 
     $ecsConfig->sets([
-        SetList::SPACES,
-        SetList::ARRAY,
-        SetList::DOCBLOCK,
-        SetList::PSR_12,
+        SetList::SPACES
     ]);
 
     $cacheDir = './cache/ecs_cache';

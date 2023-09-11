@@ -16,7 +16,7 @@
     }
   },
   "scripts": {
-    "ecs": "ecs check src --fix --clear-cache",
-    "ecs2": "ecs check src --fix"
+    "ecs": "ecs check src --fix --clear-cache -vvv --xdebug",
+    "ecs2": "ecs check src --fix --debug"
   }
 }
