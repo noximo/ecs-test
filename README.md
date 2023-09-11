@@ -21,3 +21,9 @@ or
 > composer ecs2
 
 is successful
+
+
+To mitigate the issue, paralelization needs to be turned off:
+
+> $parameters = $ecsConfig->parameters();
+> $parameters->set(Option::PARALLEL, false);
